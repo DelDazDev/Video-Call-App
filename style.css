@@ -1,0 +1,270 @@
+:root {
+  --backgroundColor-pricipal: rgb(255, 255, 255);
+  --backgroundColor-secondary: rgb(250, 250, 250);
+  --boxShadow: 1px 1px 3px 1px rgb(69, 63, 63);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0.6rem auto;
+  background-color: var(--backgroundColor-pricipal);
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Aside Nav */
+.aside__nav {
+  padding: 0.5rem;
+  background-color: var(--backgroundColor-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: var(--boxShadow);
+}
+
+.aside__nav-imgLogo {
+  width: 50px;
+}
+
+.aside__nav-iconos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  .bi {
+    font-size: 1.5rem;
+    color: grey;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .bi:hover {
+    color: blue;
+  }
+}
+
+.aside__nav-imgProfile {
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* Main */
+
+main {
+  background-color: var(--backgroundColor-secondary);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: var(--boxShadow);
+}
+
+.container__fecha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container__fecha-titulo {
+  display: flex;
+  gap: 1rem;
+  .bi {
+    color: blue;
+  }
+}
+
+button {
+  border: none;
+  color: rgb(55, 55, 192);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: var(--backgroundColor-pricipal);
+}
+
+button:hover {
+  color: blue;
+}
+
+.main__img-hero {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 1rem;
+}
+
+.img__cliente {
+  position: relative;
+  width: 150px;
+  border-radius: 15px;
+}
+
+.container__imagenesClientes {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+picture p {
+  width: 50px;
+  position: relative;
+  top: -2rem;
+  left: 2.5rem;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.main__container-iconos {
+  text-align: center;
+  .bi {
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: var(--backgroundColor-pricipal);
+    border-radius: 50%;
+  }
+  .bi:hover {
+    color: red;
+  }
+  button {
+    background-color: red;
+    color: white;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+/* Aside Profile */
+.aside__profiles {
+  background-color: var(--backgroundColor-secondary);
+  border-radius: 15px;
+  box-shadow: var(--boxShadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside__profiles-titulo {
+  text-align: center;
+  h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+}
+
+.aside__profiles-article {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.aside__profiles-article .container__description {
+  width: 80%;
+  background-color: var(--backgroundColor-pricipal);
+  border-radius: 15px;
+  padding: 0.5rem;
+  p {
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+.aside__profiles-article .container__description .container__nombre {
+  display: flex;
+  justify-content: space-between;
+  h5 {
+    color: blue;
+    font-size: 1.1rem;
+  }
+}
+
+.img__profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.aside__profiles-input {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 3rem;
+  margin-right: 0.5rem;
+  input {
+    height: 30px;
+    border: none;
+    padding: 5px 10px;
+  }
+  .bi {
+    color: blue;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  .aside__nav {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .aside__nav-iconos {
+    flex-direction: row;
+  }
+
+  .aside__profiles .container__articles {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .aside__profiles-article {
+    margin-left: 1rem;
+  }
+
+  .aside__profiles-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    input {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  button {
+    font-size: 0.8rem;
+  }
+
+  .container__imagenesClientes {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .img__cliente {
+    width: 125px;
+  }
+
+  .aside__profiles-input {
+    width: 90%;
+  }
+}
