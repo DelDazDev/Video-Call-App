@@ -268,3 +268,9 @@ picture p {
     width: 90%;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .container__fecha-titulo p {
+    font-size: 0.85rem;
+  }
+}
